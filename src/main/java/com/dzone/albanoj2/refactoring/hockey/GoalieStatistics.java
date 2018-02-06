@@ -41,10 +41,14 @@ public class GoalieStatistics {
         else {
             List<Game> games = season.getGames();
             int g = 0;
-            int tsoga = 0;
 
             for (Game game: games) {
                 g += game.getGoalsAgainst();
+            }
+
+            int tsoga = 0;
+
+            for (Game game: games) {
                 tsoga += game.getShotsOnGoalAgainst();
             }
 
