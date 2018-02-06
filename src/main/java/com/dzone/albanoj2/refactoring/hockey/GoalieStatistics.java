@@ -30,12 +30,7 @@ public class GoalieStatistics {
     }
 
     private int getTotalGoalsAgainst(List<Game> games) {
-        int g = 0;
-
-        for (Game game: games) {
-            g += game.getGoalsAgainst();
-        }
-        return g;
+        return games.stream().mapToInt(game -> game.getGoalsAgainst()).sum();
     }
 
     public double getSavePercentage() {
