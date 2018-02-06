@@ -16,7 +16,6 @@ public class GoalieStatistics {
             return 0.0;
         }
         else {
-            List<Game> games = season.getGames();
             int tga = season.getTotalGoalsAgainst();
             double mins = season.getTotalMinutesPlayed();
 
@@ -30,7 +29,6 @@ public class GoalieStatistics {
             return 0.0;
         }
         else {
-            List<Game> games = season.getGames();
             int g = season.getTotalGoalsAgainst();
             int tsoga = season.getTotalShotsOnGoalAgainst();
 
