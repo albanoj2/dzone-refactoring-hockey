@@ -17,11 +17,7 @@ public class GoalieStatistics {
         }
         else {
             List<Game> games = season.getGames();
-            int tga = 0;
-
-            for (Game game: games) {
-                tga += game.getGoalsAgainst();
-            }
+            int tga = getTotalGoalsAgainst(games);
 
             double mins = 0;
 
@@ -33,6 +29,15 @@ public class GoalieStatistics {
         }
     }
 
+    private int getTotalGoalsAgainst(List<Game> games) {
+        int g = 0;
+
+        for (Game game: games) {
+            g += game.getGoalsAgainst();
+        }
+        return g;
+    }
+
     public double getSavePercentage() {
 
         if (season.getGames().isEmpty()) {
@@ -40,11 +45,7 @@ public class GoalieStatistics {
         }
         else {
             List<Game> games = season.getGames();
-            int g = 0;
-
-            for (Game game: games) {
-                g += game.getGoalsAgainst();
-            }
+            int g = getTotalGoalsAgainst(games);
 
             int tsoga = 0;
 
