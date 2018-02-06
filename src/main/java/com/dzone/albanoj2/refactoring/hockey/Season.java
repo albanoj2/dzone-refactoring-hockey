@@ -30,4 +30,8 @@ public class Season {
     public GoalieStatistics getGoalieStatistics() {
         return new GoalieStatistics(this);
     }
+    
+    public int getTotalGoalsAgainst() {
+        return games.stream().mapToInt(game -> game.getGoalsAgainst()).sum();
+    }
 }

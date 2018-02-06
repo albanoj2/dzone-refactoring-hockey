@@ -17,7 +17,7 @@ public class GoalieStatistics {
         }
         else {
             List<Game> games = season.getGames();
-            int tga = getTotalGoalsAgainst(games);
+            int tga = season.getTotalGoalsAgainst();
 
             double mins = 0;
 
@@ -29,10 +29,6 @@ public class GoalieStatistics {
         }
     }
 
-    private int getTotalGoalsAgainst(List<Game> games) {
-        return games.stream().mapToInt(game -> game.getGoalsAgainst()).sum();
-    }
-
     public double getSavePercentage() {
 
         if (season.getGames().isEmpty()) {
@@ -40,7 +36,7 @@ public class GoalieStatistics {
         }
         else {
             List<Game> games = season.getGames();
-            int g = getTotalGoalsAgainst(games);
+            int g = season.getTotalGoalsAgainst();
 
             int tsoga = 0;
 
