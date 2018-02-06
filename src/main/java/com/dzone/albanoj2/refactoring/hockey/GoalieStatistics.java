@@ -25,12 +25,7 @@ public class GoalieStatistics {
     }
 
 	private double getTotalMinutesPlayed(List<Game> games) {
-		double mins = 0;
-
-		for (Game game: games) {
-		    mins += game.getMinutesPlayed();
-		}
-		return mins;
+		return games.stream().mapToDouble(game -> game.getMinutesPlayed()).sum();
 	}
 
     public double getSavePercentage() {
