@@ -39,11 +39,6 @@ public class GoalieStatistics {
     }
 
 	private int getTotalShotsOnGoalAgainst(List<Game> games) {
-		int tsoga = 0;
-
-		for (Game game: games) {
-		    tsoga += game.getShotsOnGoalAgainst();
-		}
-		return tsoga;
+		return games.stream().mapToInt(game -> game.getShotsOnGoalAgainst()).sum();
 	}
 }
