@@ -10,7 +10,7 @@ public class GoalieStatistics {
 
     public double getGoalsAgainstAverage() {
 
-        if (!hasNotStarted()) {
+        if (!hasStarted()) {
             return 0.0;
         }
         else {
@@ -21,13 +21,13 @@ public class GoalieStatistics {
         }
     }
 
-	private boolean hasNotStarted() {
+	private boolean hasStarted() {
 		return !season.getGames().isEmpty();
 	}
 
     public double getSavePercentage() {
 
-        if (!hasNotStarted()) {
+        if (!hasStarted()) {
             return 0.0;
         }
         else {
