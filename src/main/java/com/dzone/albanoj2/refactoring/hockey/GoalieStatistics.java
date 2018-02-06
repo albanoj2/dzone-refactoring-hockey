@@ -18,15 +18,11 @@ public class GoalieStatistics {
         else {
             List<Game> games = season.getGames();
             int tga = season.getTotalGoalsAgainst();
-            double mins = getTotalMinutesPlayed(games);
+            double mins = season.getTotalMinutesPlayed();
 
             return (tga / mins) * 60;
         }
     }
-
-	private double getTotalMinutesPlayed(List<Game> games) {
-		return games.stream().mapToDouble(game -> game.getMinutesPlayed()).sum();
-	}
 
     public double getSavePercentage() {
 
