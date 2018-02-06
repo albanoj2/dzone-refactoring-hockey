@@ -32,13 +32,9 @@ public class GoalieStatistics {
         else {
             List<Game> games = season.getGames();
             int g = season.getTotalGoalsAgainst();
-            int tsoga = getTotalShotsOnGoalAgainst(games);
+            int tsoga = season.getTotalShotsOnGoalAgainst();
 
             return ((double) tsoga - g) / tsoga;
         }
     }
-
-	private int getTotalShotsOnGoalAgainst(List<Game> games) {
-		return games.stream().mapToInt(game -> game.getShotsOnGoalAgainst()).sum();
-	}
 }

@@ -34,6 +34,10 @@ public class Season {
     public int getTotalGoalsAgainst() {
         return games.stream().mapToInt(game -> game.getGoalsAgainst()).sum();
     }
+
+	public int getTotalShotsOnGoalAgainst() {
+		return games.stream().mapToInt(game -> game.getShotsOnGoalAgainst()).sum();
+	}
     
     public double getTotalMinutesPlayed() {
 		return games.stream().mapToDouble(game -> game.getMinutesPlayed()).sum();
