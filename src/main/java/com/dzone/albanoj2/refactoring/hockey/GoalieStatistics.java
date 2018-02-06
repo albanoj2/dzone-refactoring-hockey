@@ -18,10 +18,14 @@ public class GoalieStatistics {
         else {
             List<Game> games = season.getGames();
             int tga = 0;
-            double mins = 0;
 
             for (Game game: games) {
                 tga += game.getGoalsAgainst();
+            }
+
+            double mins = 0;
+
+            for (Game game: games) {
                 mins += game.getMinutesPlayed();
             }
 
