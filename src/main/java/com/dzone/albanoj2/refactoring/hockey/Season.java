@@ -42,4 +42,8 @@ public class Season {
     public double getTotalMinutesPlayed() {
 		return games.stream().mapToDouble(game -> game.getMinutesPlayed()).sum();
 	}
+    
+    public boolean hasStarted() {
+		return !games.isEmpty();
+	}
 }
