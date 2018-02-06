@@ -1,7 +1,5 @@
 package com.dzone.albanoj2.refactoring.hockey;
 
-import java.util.List;
-
 public class GoalieStatistics {
 
     private final Season season;
@@ -16,10 +14,10 @@ public class GoalieStatistics {
             return 0.0;
         }
         else {
-            int tga = season.getTotalGoalsAgainst();
-            double mins = season.getTotalMinutesPlayed();
+            int totalGoalsAgainst = season.getTotalGoalsAgainst();
+            double totalMinutesPlayed = season.getTotalMinutesPlayed();
 
-            return (tga / mins) * 60;
+            return (totalGoalsAgainst / totalMinutesPlayed) * 60;
         }
     }
 
@@ -29,10 +27,10 @@ public class GoalieStatistics {
             return 0.0;
         }
         else {
-            int g = season.getTotalGoalsAgainst();
-            int tsoga = season.getTotalShotsOnGoalAgainst();
+            int totalGoalsAgainst = season.getTotalGoalsAgainst();
+            int totalSogAgainst = season.getTotalShotsOnGoalAgainst();
 
-            return ((double) tsoga - g) / tsoga;
+            return ((double) totalSogAgainst - totalGoalsAgainst) / totalSogAgainst;
         }
     }
 }
