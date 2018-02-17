@@ -2,9 +2,9 @@ package com.dzone.albanoj2.refactoring.hockey;
 
 public class Game {
 
-    public final double minutesPlayed;
-    public final int goalsAgainst;
-    public final int shotsOnGoalAgainst;
+    private final double minutesPlayed;
+    private final int goalsAgainst;
+    private final int shotsOnGoalAgainst;
 
     public Game(int goalsAgainst, int shotsOnGoalAgainst, double minutesPlayed) {
         this.goalsAgainst = goalsAgainst;

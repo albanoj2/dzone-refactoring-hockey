@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Season {
 
-    public final List<Game> games;
+    private final List<Game> games;
 
     public Season(List<Game> games) {
         this.games = new ArrayList<>(games);
